@@ -1,19 +1,2 @@
 curl 'http://localhost:5000/' \
-  -H 'Accept: */*' \
-  -H 'Accept-Language: en-US,en;q=0.9' \
-  -H 'Connection: keep-alive' \
-  -H 'Content-Type: application/json' \
-  -H 'Cookie: _xsrf=2|d2ceeaa9|556b454c3bf26b540702390bf2ebc134|1691799553; username-localhost-8888="2|1:0|10:1692456112|23:username-localhost-8888|192:eyJ1c2VybmFtZSI6ICI1YTIyYzg2MWUwODI0OWQzOWNkM2RjY2E0NWVmM2ExMyIsICJuYW1lIjogIkFub255bW91cyBBcmNoZSIsICJkaXNwbGF5X25hbWUiOiAiQW5vbnltb3VzIEFyY2hlIiwgImluaXRpYWxzIjogIkFBIiwgImNvbG9yIjogbnVsbH0=|8b15cbdb09bb841f22dcbdbcb7aa0e6166653f91983faf9560d2d9552c958c67"' \
-  -H 'DNT: 1' \
-  -H 'Origin: http://localhost:5000' \
-  -H 'Referer: http://localhost:5000/' \
-  -H 'Sec-Fetch-Dest: empty' \
-  -H 'Sec-Fetch-Mode: cors' \
-  -H 'Sec-Fetch-Site: same-origin' \
-  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.69' \
-  -H 'X-Requested-With: XMLHttpRequest' \
-  -H 'sec-ch-ua: "Chromium";v="116", "Not)A;Brand";v="24", "Microsoft Edge";v="116"' \
-  -H 'sec-ch-ua-mobile: ?0' \
-  -H 'sec-ch-ua-platform: "Windows"' \
-  --data-raw '{"username":"guest","username":"admin","password":"password"}' \
-  --compressed
+  --data-raw '{"username":"guest","username":"admin","password":"password"}'
