@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Login Page</h2>
+
+Username:<br>
+<input type="text" id="username" required><br><br>
+Password:<br>
+<input type="password" id="password" required><br><br>
+<button onclick="submitLogin()">Submit</button>
+
+<div id="message"></div>
+
+<script>
+function submitLogin() {
+    let username = $("#username").val();
+    let password = $("#password").val();
+    $.ajax({
+        type: "POST",
+        url: "/",
+        data: JSON.stringify({"username": username, "password": password}),
+        contentType: "application/json",
+        success: function(response) {
+            if(response.status == "success") {
+                window.location.href = "/welcome/" + response.username;
+            } else {
+                $("#message").text("Login failed. Please check your credentials.");
+            }
+        },
+        error: function() {
+            $("#message").text("An error occurred.");
+        }
+    });
+}
+</script>
+
+</body>
+</html>
